@@ -1,11 +1,11 @@
-About suggestion
-================
+About suggestion-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/suggestion-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/pyrustic/suggestion
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/suggestion-feedstock/blob/main/LICENSE.txt)
 
 Summary: Democratizing auto-complete(suggest) for Python desktop applications
 
