@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/suggestion-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/suggestion-{{ version }}.tar.gz
   sha256: 7f7e0ac7725b82f1b2c000447478ffc017588a4d79d7e1160542eca6514f67c0
 
 build:
@@ -14,14 +14,15 @@ build:
     - suggestion = suggestion.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python {{ python_min }}
+    - setuptools
   run:
-    - python >=3.5
+    - python >={{ python_min }}
     - viewable
 
 test:
@@ -32,6 +33,7 @@ test:
     - suggestion --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/pyrustic/suggestion
